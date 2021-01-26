@@ -1,0 +1,54 @@
+<div>
+    <div *ngIf="paymentService.fakeUserData">
+        <div class="col-12 text-center">
+            <h1 class="mt-4">Fake Api Data</h1>
+            <button class="btn btn2 mt-4 mb-4" data-toggle="modal" data-target="#postfake">Post Fake Data</button>
+            <div class="row">
+                <div class="col-md-4 col-12 mt-4 text-left" *ngFor="let user of  paymentService.fakeUserData">
+                    <div class="card">
+                        <div class="card-body">
+                            <p> Title : {{user.title}}</p>
+                            <p>Body : {{user.body}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="postfake" tabindex="-1" aria-labelledby="postfakeLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Enter fake Data</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body mb-4">
+            <div class="col-12 mb-4">
+                <div class="form-group">
+                    <label for="title">Title</label>
+                    <input type="text" class="form-control" id="title" name="title" [(ngModel)]="paymentService.title" placeholder="Enter Your Title">
+                  </div>
+                  <div class="form-group">
+                    <label for="body">Body</label>
+                    <input type="text" class="form-control" id="body" name="body" [(ngModel)]="paymentService.body" placeholder="Enter Your Body">
+                  </div>
+            </div>
+            <div class="col-12">
+            <div class="row">
+                <div class="col-6">
+                    <button type="button " class="btn btn2 p-2 w-100" data-dismiss="modal">Close</button>
+                </div>
+                <div class="col-6">
+                    <button type="button " class="btn mainBtn w-100" (click)="paymentService.setUserData()" style="padding: 10px !important;" >Save Data</button>
+                </div>
+            </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

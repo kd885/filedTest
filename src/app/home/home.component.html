@@ -1,0 +1,11 @@
+<section>
+    <div *ngIf="!userData" class="text-center mt-5 mb-5">
+      <h1>AI Powered Facebook Marketing</h1>
+      <button class="btn mainBtn mt-4" routerLink="/payment">Pay And Use</button>
+    </div>
+    <div *ngIf="userData" class="text-center mt-5 mb-5">
+        <div class="loader"><ng-lottie [options]="options" (animationCreated)="animationCreated($event)"></ng-lottie></div>
+        <h1>Thankyou {{userData.cardName}} your payment {{userData.amount}} received</h1>
+        <button class="btn mainBtn mt-4" (click)="clear()" >Repayment and clear states</button>
+      </div>
+</section>

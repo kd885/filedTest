@@ -1,0 +1,41 @@
+/* You can add global styles to this file, and also import other style files */
+
+body{
+    color: #595957;
+}
+.btn.focus, .btn:focus {
+    outline: 0;
+    box-shadow: none;
+}
+.form-control:focus {
+    outline: 0;
+    box-shadow: none;
+}
+.mainBtn{
+    background-image: linear-gradient(to right, #38ccf5 0%, #008cc9 51%, #38ccf5 100%);
+    background-size: 200% 100%;
+    color: #FFFFFF;
+    padding: calc(1.2em + 2px) calc(1.8em + 2px);
+    font-size: 1em;
+    font-weight: 500;
+    border: none;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+.mainBtn:hover{
+    background-position: right center;
+    color: #FFFFFF;
+}
+.btn2{
+    border: 2px solid #008cc9;
+    border-radius: 3px;
+    padding: 0.8em 1.6em;
+    transition: all 0.3s ease;
+    color: #008cc9;
+    text-transform: uppercase;
+}
+.btn2:hover{
+    background: #008cc9;
+    color: #FFFFFF;
+}
